@@ -69,7 +69,7 @@
 				<Commands>
 					<Item id="41001" name="&amp;Nuevo"/>
 					<Item id="41002" name="&amp;Abrir"/>
-					<Item id="41019" name="Explorer"/>
+					<Item id="41019" name="Explorador de archivos"/>
 					<Item id="41020" name="cmd"/>
 					<Item id="41003" name="Cerrar"/>
 					<Item id="41004" name="C&amp;errar todas"/>
@@ -90,6 +90,7 @@
 					<Item id="41017" name="Renombrar..."/>
 					<Item id="41021" name="Restaurar archivo reciente"/>
 					<Item id="41022" name="Abrir carpeta &amp;de trabajo"/>
+					<Item id="41023" name="Open in Default Viewer"/>
 					<Item id="42001" name="C&amp;ortar"/>
 					<Item id="42002" name="&amp;Copiar"/>
 					<Item id="42003" name="&amp;Deshacer"/>
@@ -122,7 +123,7 @@
 					<Item id="42071" name="iNVERTIR mayúsculas/MINÚSCULAS"/>
 					<Item id="42072" name="mAyúsculas/mInÚscuLAs ALeatoriO"/>
 					<Item id="42073" name="Abrir archivo"/>
-					<Item id="42074" name="Abrir carpeta contenedora en Explorer"/>
+					<Item id="42074" name="Abrir carpeta contenedora en explorador de archivos"/>
 					<Item id="42075" name="Buscar en Internet"/>
 					<Item id="42076" name="Cambiar motor de búsqueda..."/>
 					<Item id="42018" name="&amp;Inicio de grabación"/>
@@ -302,7 +303,6 @@
 					<Item id="42040" name="Abrir los archivos recientes"/>
 					<Item id="42041" name="Vaciar lista de recientes"/>
 					<Item id="48016" name="Modificar enlace/Borrar Macro"/>
-
 					<Item id="48017" name="Modificar enlace/Borrar comando..."/>
 				</Commands>
 			</Main>
@@ -329,26 +329,23 @@
 				<Item CMID="18" name="Cerrar todo a la derecha"/>
 				<Item CMID="19" name="Abrir carpeta en Explorer"/>
 				<Item CMID="20" name="Abrir carpeta en cmd"/>
-				<Item CMID="21" name="Abrir con el visor predeterminado"/>
+				<Item CMID="21" name="Abrir en visor predeterminado"/>
 			</TabBar>
 		</Menu>
 		<Dialog>
-			<Find title="" titleFind="Buscar" titleReplace="Reemplazar" titleFindInFiles="Buscar en archivos"  titleMark="Marcar">
-			    <Item id="1721" name="Anterior"/>	
+			<Find title="" titleFind="Buscar" titleReplace="Reemplazar" titleFindInFiles="Buscar en archivos" titleMark="Marcar">
 				<Item id="1" name="Siguiente >"/>
+				<Item id="1722" name="Atrás"/>
 				<Item id="2" name="Cerrar"/>
 				<Item id="1620" name="Buscar:"/>
 				<Item id="1603" name="Solo &amp;palabras completas"/>
 				<Item id="1604" name="Coincidir &amp;MAYÚSCULAS/minúsculas"/>
 				<Item id="1605" name="Expresión &amp;regular"/>
 				<Item id="1606" name="Buscar en todo el d&amp;ocumento"/>
-				<Item id="1612" name="&amp;Arriba"/>
-				<Item id="1613" name="A&amp;bajo"/>
 				<Item id="1614" name="Contar"/>
 				<Item id="1615" name="Buscar todo"/>
 				<Item id="1616" name="Marcar línea"/>
 				<Item id="1618" name="Purgar en cada búsqueda"/>
-				<Item id="1621" name="Dirección"/>
 				<Item id="1611" name="Re&amp;emplazar con:"/>
 				<Item id="1608" name="&amp;Reemplazar"/>
 				<Item id="1609" name="Reemplazar &amp;todo"/>
@@ -504,7 +501,7 @@
 					<Item id="21424" name="Abriendo:"/>
 					<Item id="21425" name="Medio:"/>
 					<Item id="21426" name="Cerrando:"/>
-					<Item id="21127" name="Estilo"/>
+					<Item id="21427" name="Estilo"/>
 				</Folder>
 				<Keywords title="Listas de palabras clave">
 					<Item id="22101" name="1º Grupo"/>
@@ -837,8 +834,8 @@
 					<Item id="6337" name="Ext. del arch. área de trab.:"/>
 					<Item id="6114" name="Permitir"/>
 					<Item id="6115" name="Auto-indentar"/>
-					<Item id="6117" name="Ordenar por el usado más reciente"/>
-				    <Item id="6344" name="Visor de documentos"/>
+					<Item id="6117" name="Activar MRU"/>
+					<Item id="6344" name="Visor de documentos"/>
 					<Item id="6345" name="Ver en pestaña"/>
 					<Item id="6346" name="Ver en mapa de documentos"/>
 				</MISC>
@@ -876,31 +873,32 @@
 		</Dialog>
 		<MessageBox>
 			<ContextMenuXmlEditWarning title="Edición del Menú Contextual" message="Editar el archivo contextMenu.xml le permite modificar el menú contextual emergente.
-Deberá reiniciar Notepad++ para que tengan efecto los cambios tras modificar contextMenu.xml."/>
-			<NppHelpAbsentWarning title="File does not exist" message=" 
+Deberá reiniciar Notepad++ para que tengan efecto los cambios."/>
+			<NppHelpAbsentWarning title="El archivo no existe" message="
 no existe. Puede descargarlo del sitio web de Notepad++."/>
-		<SaveCurrentModifWarning title="Save Current Modification" message="Debe guardar la actual modificación.  
-Todos los cambios realizados son irreversibles
+			<SaveCurrentModifWarning title="Guardar la modificación" message="Debe guardar la modificación.
+Los cambios realizados no pueden deshacerse.
 
-¿Continuar"/>
-			<LoseUndoAbilityWarning title="Lose Undo Ability Warning" message="Debe guardar la modificación actual.
-No se pueden deshacer todas las modificaciones guardadas.
+¿Desea continuar?"/>
+			<LoseUndoAbilityWarning title="No podrá deshacer" message="Debe guardar los cambios.
+Los cambios realizados no pueden deshacerse.
 
-Continuar?"/>
-			<CannotMoveDoc title="Move to new Notepad++ Instance" message="El documento se ha modificado. Guárdelo y vuelva a intentarlo."/>
-			<DocReloadWarning title="Reload" message="¿Está seguro de que desea recargar el archivo y perder los cambios realizados en Notepad ++?"/>
-			<FileLockedWarning title="Save failed" message="Compruebe si este archivo está abierto por otro programa"/>
+¿Desea continuar?"/> 
+
+			<CannotMoveDoc title="Nuevo documento de Notepad++" message="Guarde el documento modificado y vuelva a intentarlo."/>
+			<DocReloadWarning title="Reabrir" message="Confirme si desea volver a abrir el documento sin guardar los cambios"/>
+			<FileLockedWarning title="Imposible guardar" message="Compruebe si el archivo está abierto por otro programa"/>
 			<FileAlreadyOpenedInNpp title="" message="El archivo ya está abierto en Notepad++."/>
-			<DeleteFileFailed title="Delete File" message="Error al eliminar el archivo"/>
+			<DeleteFileFailed title="Borrar archivo" message="Error al borrar"/>
 			<!-- $INT_REPLACE$ is a place holder, don't translate it -->
-			<NbFileToOpenImportantWarning title="Amount of files to open is too large" message="$INT_REPLACE$ en espera de abrirse. 
-Confirme si desea la apertura"/>
-			<SettingsOnCloudError title="Settings on Cloud" message="Parece que la ruta de la configuración en la nube se establece en una unidad de sólo lectura,
-o en una carpeta que precisa de privilegios para escritura.
-Sus ajustes en la nube se cancelarán. Restablezca un valor coherente en el cuadro de diálogo de Preferencias."/>
-			<FilePathNotFoundWarning title="File Open" message="El archivo que intenta abrir no existe."/>
-			<SessionFileInvalidError title="Could not Load Session" message="El archivo de sesión está dañado o no es válido."/>
-        </MessageBox>
+			<NbFileToOpenImportantWarning title="Demasiados archivos" message="$INT_REPLACE$ archivos serán abiertos.
+¿Desea continuar?"/>
+			<SettingsOnCloudError title="Ajustes en la nube" message="Ha usado una unidad de solo lectura para ajustes en la nube,
+o una carpeta que necesita privilegios para escritura.
+Sus ajustes en la nube se cancelarán. Por favor ajuste de nuevo desde diálogo de Preferencias."/>
+			<FilePathNotFoundWarning title="File Open" message="El archivo que está intentando abrir no existe."/>
+			<SessionFileInvalidError title="No se pudo cargar la sesión" message="El archivo de sesión está corrupto o no es válido."/>
+		</MessageBox>
 		<ClipboardHistory>
 			<PanelTitle name="Historial de portapapeles"/>
 		</ClipboardHistory>
@@ -978,7 +976,7 @@ Sus ajustes en la nube se cancelarán. Restablezca un valor coherente en el cuad
 			<word-chars-list-tab-warning value="$INT_REPLACE$ TAB(s)"/>
 			<word-chars-list-warning-end value="  en su lista de caracteres."/>
 			<cloud-invalid-warning value="Ruta inválida."/>
-			<cloud-restart-warning value="Por favor reinicie Notepad++ para que tome efecto."/>
+			<cloud-restart-warning value="Reinicie Notepad++ para que surta efecto."/>
 			<shift-change-direction-tip value="Use Shift+Enter para buscar en la dirección contraria."/>
 		</MiscStrings>
 	</Native-Langue>
