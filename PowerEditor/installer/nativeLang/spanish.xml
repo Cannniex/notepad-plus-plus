@@ -90,7 +90,7 @@
 					<Item id="41017" name="Renombrar..."/>
 					<Item id="41021" name="Restaurar archivo reciente"/>
 					<Item id="41022" name="Abrir carpeta &amp;de trabajo"/>
-					<Item id="41023" name="Open in Default Viewer"/>
+					<Item id="41023" name="Abrir en visor predeterminado"/>
 					<Item id="42001" name="C&amp;ortar"/>
 					<Item id="42002" name="&amp;Copiar"/>
 					<Item id="42003" name="&amp;Deshacer"/>
@@ -120,8 +120,8 @@
 					<Item id="42068" name="Convertir A Modo Título (mezclar)"/>
 					<Item id="42069" name="Convertir a modo frase"/>
 					<Item id="42070" name="Convertir a modo frase (mezclar)"/>
-					<Item id="42071" name="iNVERTIR mayúsculas/MINÚSCULAS"/>
-					<Item id="42072" name="mAyúsculas/mInÚscuLAs ALeatoriO"/>
+					<Item id="42071" name="Invertir mayúsculas/minúsculas"/>
+					<Item id="42072" name="Aleatorio"/>
 					<Item id="42073" name="Abrir archivo"/>
 					<Item id="42074" name="Abrir carpeta contenedora en explorador de archivos"/>
 					<Item id="42075" name="Buscar en Internet"/>
@@ -242,7 +242,7 @@
 					<Item id="44094" name="Pestaña 9"/>
 					<Item id="44095" name="Pestaña siguiente"/>
 					<Item id="44096" name="Pestaña anterior"/>
-					<Item id="44097" name="Monitorizando (cola -f)"/>
+					<Item id="44097" name="Monitorizando (tail -f)"/>
 					<Item id="44098" name="Mover pestaña adelante"/>
 					<Item id="44099" name="Mover pestaña atrás"/>
 					<Item id="44032" name="Pantalla completa o no"/>
@@ -335,7 +335,7 @@
 		<Dialog>
 			<Find title="" titleFind="Buscar" titleReplace="Reemplazar" titleFindInFiles="Buscar en archivos" titleMark="Marcar">
 				<Item id="1" name="Siguiente >"/>
-				<Item id="1722" name="Atrás"/>
+				<Item id="1722" name="Anterior"/>
 				<Item id="2" name="Cerrar"/>
 				<Item id="1620" name="Buscar:"/>
 				<Item id="1603" name="Solo &amp;palabras completas"/>
@@ -353,8 +353,8 @@
 				<Item id="1688" name="Siempre"/>
 				<Item id="1632" name="En la selección"/>
 				<Item id="1633" name="Limpiar"/>
-				<Item id="1635" name="Reemplazar en todos los archivos abiertos"/>
-				<Item id="1636" name="Buscar en todos los archivos abiertos"/>
+				<Item id="1635" name="Reemplazar en documentos abiertos"/>
+				<Item id="1636" name="Buscar en documentos abiertos"/>
 				<Item id="1654" name="Filtros:"/>
 				<Item id="1655" name="Carpeta:"/>
 				<Item id="1656" name="Buscar todo"/>
@@ -481,8 +481,8 @@
 					<Item id="1" name="OK"/>
 					<Item id="2" name="Cancelar"/>
 				</StylerDialog>
-				<Folder title="Relieve sintáctico &amp;&amp; Valores por defecto">
-					<Item id="21101" name="Estilo por defecto"/>
+				<Folder title="Relieve sintáctico &amp;&amp; Valores predeterminado">
+					<Item id="21101" name="Estilo predeterminado"/>
 					<Item id="21201" name="Estilo"/>
 					<Item id="21105" name="Documentación:"/>
 					<Item id="21104" name="Sitio web:"/>
@@ -501,7 +501,7 @@
 					<Item id="21424" name="Abriendo:"/>
 					<Item id="21425" name="Medio:"/>
 					<Item id="21426" name="Cerrando:"/>
-					<Item id="21427" name="Estilo"/>
+					<Item id="21127" name="Estilo"/>
 				</Folder>
 				<Keywords title="Listas de palabras clave">
 					<Item id="22101" name="1º Grupo"/>
@@ -679,8 +679,8 @@
 					<Item id="6419" name="Archivo nuevo"/>
 					<Item id="6420" name="Aplicar a los archivos ANSI abiertos"/>
 				</NewDoc>
-				<DefaultDir title="Carpeta por defecto">
-					<Item id="6413" name="Carpeta por defecto (Abrir/Guardar)"/>
+				<DefaultDir title="Carpeta predeterminado">
+					<Item id="6413" name="Carpeta predeterminado (Abrir/Guardar)"/>
 					<Item id="6414" name="Seguir documento actual"/>
 					<Item id="6415" name="Recordar última carpeta"/>
 					<Item id="6430" name="Usar nuevo estilo de diálogo Guardar (sin función de extensión de archivo)"/>
@@ -698,7 +698,7 @@
 					<Item id="6301" name="Tabuladores"/>
 					<Item id="6302" name="Sustituir por espacios"/>
 					<Item id="6303" name="Tamaño: "/>
-					<Item id="6510" name="Usar valor por defecto"/>
+					<Item id="6510" name="Usar valor predeterminado"/>
 				</Language>
 				<Highlighting title="Resaltado">
 					<Item id="6333" name="Resaltado inteligente"/>
@@ -788,7 +788,7 @@
 					<Item id="6151" name="Configuración de múltiples instancias"/>
 					<Item id="6152" name="Abrir sesión en nueva instancia de Notepad++"/>
 					<Item id="6153" name="Usar siempre en modo multi-instancia"/>
-					<Item id="6154" name="Instancia única por defecto"/>
+					<Item id="6154" name="Instancia única predeterminado"/>
 					<Item id="6155" name="* La modificación de este ajuste necesita reiniciar Notepad++"/>
 				</MultiInstance>
 				<Delimiter title="Delimitador">
@@ -834,7 +834,7 @@
 					<Item id="6337" name="Ext. del arch. área de trab.:"/>
 					<Item id="6114" name="Permitir"/>
 					<Item id="6115" name="Auto-indentar"/>
-					<Item id="6117" name="Activar MRU"/>
+					<Item id="6117" name="Activar modo MRU"/>
 					<Item id="6344" name="Visor de documentos"/>
 					<Item id="6345" name="Ver en pestaña"/>
 					<Item id="6346" name="Ver en mapa de documentos"/>
@@ -872,49 +872,48 @@
 			</ColumnEditor>
 		</Dialog>
 		<MessageBox>
-			<ContextMenuXmlEditWarning title="Edición del Menú Contextual" message="Editar el archivo contextMenu.xml le permite modificar el menú contextual emergente.
-Deberá reiniciar Notepad++ para que tengan efecto los cambios."/>
+			<ContextMenuXmlEditWarning title="Edición de menú contextual" message="La edición de contextMenu.xml le permite modificar el menú contextual de su Notepad ++.
+			ContextMenuXmlEditWarning title="Edición de menú contextual" message="La edición de contextMenu.xml le permite modificar el menú contextual de su Notepad ++.
+Debe reiniciar Notepad ++ para que tenga efecto después de modificar contextMenu.xml."/>
 			<NppHelpAbsentWarning title="El archivo no existe" message="
-no existe. Puede descargarlo del sitio web de Notepad++."/>
-			<SaveCurrentModifWarning title="Guardar la modificación" message="Debe guardar la modificación.
-Los cambios realizados no pueden deshacerse.
+Descárguelo en el sitio Notepad ++."/>
+			<SaveCurrentModifWarning title="Guardar la modificación actual" message="Debería guardar la modificación actual.
+Todas las modificaciones guardadas no se pueden deshacer.
 
-¿Desea continuar?"/>
-			<LoseUndoAbilityWarning title="No podrá deshacer" message="Debe guardar los cambios.
-Los cambios realizados no pueden deshacerse.
+Indique si desea continuar"/>
+			<LoseUndoAbilityWarning title="Perder alerta de capacidad de deshacer" message="Debe guardar la modificación actual.
+Todas las modificaciones guardadas no se pueden deshacer.
 
-¿Desea continuar?"/> 
-
-			<CannotMoveDoc title="Nuevo documento de Notepad++" message="Guarde el documento modificado y vuelva a intentarlo."/>
-			<DocReloadWarning title="Reabrir" message="Confirme si desea volver a abrir el documento sin guardar los cambios"/>
-			<FileLockedWarning title="Imposible guardar" message="Compruebe si el archivo está abierto por otro programa"/>
-			<FileAlreadyOpenedInNpp title="" message="El archivo ya está abierto en Notepad++."/>
-			<DeleteFileFailed title="Borrar archivo" message="Error al borrar"/>
+Indique si desea continuar"/>
+			<CannotMoveDoc title="Mover a la nueva instancia de Notepad ++" message="El documento se ha modificado, guárdelo y vuelva a intentarlo"/>
+			<DocReloadWarning title="Recargar" message = "Confirme si desea volver a cargar el archivo actual y perder los cambios en Notepad ++"/>
+			<FileLockedWarning title="Error al guardar" message="Verifique si este archivo está abierto por otro programa"/>
+			<FileAlreadyOpenedInNpp title="" message="El archivo ya está abierto en Notepad ++."/>
+			<DeleteFileFailed title="Delete File" message="Error al borrar el archivo"/>
 			<!-- $INT_REPLACE$ is a place holder, don't translate it -->
-			<NbFileToOpenImportantWarning title="Demasiados archivos" message="$INT_REPLACE$ archivos serán abiertos.
-¿Desea continuar?"/>
-			<SettingsOnCloudError title="Ajustes en la nube" message="Ha usado una unidad de solo lectura para ajustes en la nube,
-o una carpeta que necesita privilegios para escritura.
-Sus ajustes en la nube se cancelarán. Por favor ajuste de nuevo desde diálogo de Preferencias."/>
-			<FilePathNotFoundWarning title="File Open" message="El archivo que está intentando abrir no existe."/>
-			<SessionFileInvalidError title="No se pudo cargar la sesión" message="El archivo de sesión está corrupto o no es válido."/>
+			<NbFileToOpenImportantWarning title="La cantidad de archivos para abrir es demasiado grande" message="Están a punto de abrirse$INT_REPLACE$ archivos. 
+Confirme si desea abrirlos."/>
+			<SettingsOnCloudError title="Configuración en la nube" message=Parece que la ruta de configuración en la nube está configurada en una unidad de solo lectura o en una carpeta que necesita permiso para acceder a escribir.
+Su configuración en la nube se cancelará. Restablezca el valor necesario a través del cuadro de diálogo de Preferencias. "/>
+			<FilePathNotFoundWarning title="Abrir archivo" message="El archivo que desea abrir no existe."/>
+			<SessionFileInvalidError title="No se pudo cargar la sesión" message="El archivo de sesión está dañado o no es válido." />
 		</MessageBox>
 		<ClipboardHistory>
-			<PanelTitle name="Historial de portapapeles"/>
+			<PanelTitle name="Historial del portapapeles"/>
 		</ClipboardHistory>
 		<DocSwitcher>
-			<PanelTitle name="Cambiar documento"/>
+			<PanelTitle name="Cambio de doc."/>
 			<ColumnName name="Nombre"/>
 			<ColumnExt name="Ext."/>
 		</DocSwitcher>
 		<AsciiInsertion>
-			<PanelTitle name="Panel de entrada ASCII"/>
+			<PanelTitle name="Panel de inserción ASCII/>
 			<ColumnVal name="Valor"/>
 			<ColumnHex name="Hex"/>
 			<ColumnChar name="Carácter"/>
 		</AsciiInsertion>
 		<DocumentMap>
-			<PanelTitle name="Mapa de documento"/>
+			<PanelTitle name="Mapa de Documento"/>
 		</DocumentMap>
 		<FunctionList>
 			<PanelTitle name="Lista de funciones"/>
@@ -923,13 +922,13 @@ Sus ajustes en la nube se cancelarán. Por favor ajuste de nuevo desde diálogo 
 		</FunctionList>
 		<ProjectManager>
 			<PanelTitle name="Proyecto"/>
-			<WorkspaceRootName name="Área de trabajo"/>
-			<NewProjectName name="Nombre del proyecto"/>
-			<NewFolderName name="Nombre de carpeta"/>
+			<WorkspaceRootName name="Espacio de trabajo" />
+			<NewProjectName name="Nombre del proyecto" />
+			<NewFolderName name="Nombre de la carpeta" />
 			<Menus>
 				<Entries>
-					<Item id="0" name="Área de trabajo"/>
-					<Item id="1" name="Editar"/>
+					<ID de elemento="0" name="Espacio de trabajo"/>
+					<Id. De elemento="1" nombre="Editar"/>
 				</Entries>
 				<WorkspaceMenu>
 					<Item id="3122" name="Nueva área de trabajo"/>
@@ -937,13 +936,13 @@ Sus ajustes en la nube se cancelarán. Por favor ajuste de nuevo desde diálogo 
 					<Item id="3124" name="Recargar área de trabajo"/>
 					<Item id="3125" name="Guardar"/>
 					<Item id="3126" name="Guardar como..."/>
-					<Item id="3127" name="Guardar copia como..."/>
-					<Item id="3121" name="Añadir proyecto"/>
+					<Item id="3127" name="Guardar una copia como..."/>
+					<Item id="3121" name="Añadir nuevo proyecto"/>
 				</WorkspaceMenu>
 				<ProjectMenu>
 					<Item id="3111" name="Renombrar"/>
 					<Item id="3112" name="Añadir carpeta"/>
-					<Item id="3113" name="Añadir Archivos..."/>
+					<Item id="3113" name="Añadir archivos..."/>
 					<Item id="3117" name="Añadir archivos de la carpeta..."/>
 					<Item id="3114" name="Eliminar"/>
 					<Item id="3118" name="Subir"/>
@@ -961,23 +960,25 @@ Sus ajustes en la nube se cancelarán. Por favor ajuste de nuevo desde diálogo 
 				<FileMenu>
 					<Item id="3111" name="Renombrar"/>
 					<Item id="3115" name="Eliminar"/>
-					<Item id="3116" name="Modificar la ruta"/>
+					<Item id="3116" name="Modificar la ruta del archivo"/>
 					<Item id="3118" name="Subir"/>
 					<Item id="3119" name="Bajar"/>
 				</FileMenu>
 			</Menus>
 		</ProjectManager>
 		<MiscStrings>
-			<word-chars-list-tip value="Esto le permite incluir caracteres adicionales a los caracteres de la palabra actual al hacer doble click para seleccionar o buscar con la opción &quot;Solo palabras completas&quot; seleccionada."/>
-			<word-chars-list-warning-begin value="Cuidado: "/>
+			<word-chars-list-tip value=Esto le permite incluir caracteres adicionales en palabras actuales al hacer doble clic para seleccionarlos o buscarlos con &quot;Hacer coincidir solo palabras completas&quot; opción activada."/>
+			<word-chars-list-warning-begin value="Tenga en cuenta: "/>
 			<!-- $INT_REPLACE$ is a place holder, don't translate it -->
-			<word-chars-list-space-warning value="$INT_REPLACE$ espacio(s)"/>
+			<word-chars-list-space-warning value="$INT_REPLACE$ space(s)"/>
 			<!-- $INT_REPLACE$ is a place holder, don't translate it -->
 			<word-chars-list-tab-warning value="$INT_REPLACE$ TAB(s)"/>
 			<word-chars-list-warning-end value="  en su lista de caracteres."/>
 			<cloud-invalid-warning value="Ruta inválida."/>
-			<cloud-restart-warning value="Reinicie Notepad++ para que surta efecto."/>
-			<shift-change-direction-tip value="Use Shift+Enter para buscar en la dirección contraria."/>
+			<cloud-restart-warning value="Reinicie Notepad++ para que tenga efecto ."/>
+			<shift-change-direction-tip value="Use Mayúsculas + Enter para buscar en dirección contraria"/>
 		</MiscStrings>
 	</Native-Langue>
 </NotepadPlus>
+
+
